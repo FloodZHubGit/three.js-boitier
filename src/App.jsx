@@ -4,7 +4,7 @@ import { useControls, button } from "leva";
 
 function App() {
   return (
-    <Canvas shadows camera={{ position: [8, 8, 8], fov: 50 }}>
+    <Canvas shadows={true} camera={{ position: [8, 8, 8], fov: 50 }}>
       <color attach="background" args={["#bacede"]} />
       <Experience />
     </Canvas>

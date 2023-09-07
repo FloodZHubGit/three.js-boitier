@@ -9,7 +9,7 @@ import { useGLTF } from "@react-three/drei";
 export function Toit(props) {
   const { nodes, materials } = useGLTF("/toit.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} castShadow receiveShadow>
       <mesh
         geometry={nodes.Mesh_Mesh_head_geo001_lambert2SG001.geometry}
         rotation={[-Math.PI / 2, 0, 0]}
