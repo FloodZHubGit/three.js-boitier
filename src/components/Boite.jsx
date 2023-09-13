@@ -83,7 +83,13 @@ export const Boite = () => {
       <group
         ref={toit}
         onClick={(e) => {
-          mouvementToit();
+          if (
+            visArriereDroit.current.position.y === 40 &&
+            visArriereGauche.current.position.y === 40 &&
+            visAvantDroite.current.position.y === 40 &&
+            visAvantGauche.current.position.y === 40
+          )
+            mouvementToit();
         }}
       >
         <Toit />
@@ -92,11 +98,10 @@ export const Boite = () => {
       <group
         ref={visArriereDroit}
         onClick={(e) => {
-          if (toit.current.position.x === 84)
-            gsap.to(visArriereDroit.current.position, {
-              duration: 1,
-              y: 40,
-            });
+          gsap.to(visArriereDroit.current.position, {
+            duration: 1,
+            y: 40,
+          });
         }}
       >
         <VisArriereDroit />
@@ -104,11 +109,10 @@ export const Boite = () => {
       <group
         ref={visArriereGauche}
         onClick={(e) => {
-          if (toit.current.position.x === 84)
-            gsap.to(visArriereGauche.current.position, {
-              duration: 1,
-              y: 40,
-            });
+          gsap.to(visArriereGauche.current.position, {
+            duration: 1,
+            y: 40,
+          });
         }}
       >
         <VisArriereGauche />
@@ -116,11 +120,10 @@ export const Boite = () => {
       <group
         ref={visAvantDroite}
         onClick={(e) => {
-          if (toit.current.position.x === 84)
-            gsap.to(visAvantDroite.current.position, {
-              duration: 1,
-              y: 40,
-            });
+          gsap.to(visAvantDroite.current.position, {
+            duration: 1,
+            y: 40,
+          });
         }}
       >
         <VisAvantDroite />
@@ -128,11 +131,10 @@ export const Boite = () => {
       <group
         ref={visAvantGauche}
         onClick={(e) => {
-          if (toit.current.position.x === 84)
-            gsap.to(visAvantGauche.current.position, {
-              duration: 1,
-              y: 40,
-            });
+          gsap.to(visAvantGauche.current.position, {
+            duration: 1,
+            y: 40,
+          });
         }}
       >
         <VisAvantGauche />
